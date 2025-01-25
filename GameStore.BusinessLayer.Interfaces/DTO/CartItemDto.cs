@@ -1,0 +1,17 @@
+﻿// <copyright file="CartItemDto.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace GameStore.BusinessLayer.Interfaces.DTO
+{
+    public class CartItemDto
+    {
+        public Guid GameId { get; set; }
+
+        public double Price { get; set; }
+
+        public int Quantity { get; set; }
+
+        public int Discount { get; set; }
+    }
+}

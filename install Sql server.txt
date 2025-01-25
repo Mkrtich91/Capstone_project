@@ -1,0 +1,31 @@
+1. install Microsoft SQL Server 2019 + Management Studio - use this video https://www.youtube.com/watch?v=dP_ZmYhNFlg&t=20s
+2.Open in visual studio Sql Server Object Explorer and chouse DESKTOP-JQM4T96\SQLEXPRESS open connection string like `
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=DESKTOP-JQM4T96\\SQLEXPRESS;Initial Catalog=GameStore;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False" and it put in 
+appsetings.json 
+
+3.install  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.18" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.18" /> in nu get packeges 
+
+4.create DataContext      public class DataContext : DbContext
+    {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+
+        }
+
+5.builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+}); put it in program.cs
+
+6. Open Package Manager Console  and write 
+1.Add-Migration InitialCreate
+3.update-Database
+
+7. open Terminat>Deveoper PowerShell and write cd >GameStore and than dotnet run seeddata for adding data from seed.cs class into database 
+
+all these steps (from 2 into 7 ) i have done from this videos you can also use if you wont be able to do in my descriptions 
+
+
+video https://www.youtube.com/watch?v=EmV_IBYIlyo&list=PL82C6-O4XrHdiS10BLh23x71ve9mQCln0&index=5

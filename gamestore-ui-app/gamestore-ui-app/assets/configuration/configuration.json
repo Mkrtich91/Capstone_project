@@ -1,0 +1,39 @@
+{
+  "baseApiUrl": "https://localhost:7207",
+
+  "gameApiUrl": "/games",
+  "gameByIdApiUrl": "/games/find/{id}",
+  "gamesApiUrl": "/games",
+  "gamesByGenreApiUrl": "/genres/{id}/games",
+  "gamesByPublisherApiUrl": "/publisher/{companyName}/games",
+  "gamesByPlatformApiUrl": "/platforms/{id}/games",
+  "getGameFile": "/games/{key}/file",
+  "updateGameApiUrl": "/games",
+  "addGameApiUrl": "/games",
+  "deleteGameApiUrl": "/games",
+
+  "genreApiUrl": "/genres/{id}",
+  "genresApiUrl": "/genres",
+  "genresByGameApiUrl": "/games/{key}/genres",
+  "genresByParentApiUrl": "/genres/{id}/genres",
+  "updateGenreApiUrl": "/genres",
+  "addGenreApiUrl": "/genres",
+  "deleteGenreApiUrl": "/genres",
+
+  "platformApiUrl": "/platforms/{id}",
+  "platformsApiUrl": "/platforms",
+  "platformsByGameApiUrl": "/games/{key}/platforms",
+  "updatePlatformApiUrl": "/platforms",
+  "addPlatformApiUrl": "/platforms",
+  "deletePlatformApiUrl": "/platforms",
+
+
+  "orderApiUrl": "orders/{id}",
+  "ordersApiUrl": "orders",
+  "orderDetailsApiUrl": "orders/{id}/details",
+  "buyGameApiUrl": "games/{key}/buy",
+  "cancelGameBuyApiUrl": "orders/cart/{key}",
+  "basketApiUrl": "orders/cart",
+  "makeOrderInfoApiUrl": "orders/payment-methods",
+  "payApiUrl": "orders/payment"
+}
